@@ -1,0 +1,3 @@
+<ul class="todo-list">
+  <app-todos-item *ngFor="let task of toDoList | filterListPipe: filterInitial" [toDo]="task"></app-todos-item>
+</ul>

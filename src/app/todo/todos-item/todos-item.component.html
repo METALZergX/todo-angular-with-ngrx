@@ -1,0 +1,9 @@
+<!-- editing / completed -->
+<li [ngClass]="{ 'completed': toDo.status, 'editing': flagEdit }">
+  <div class="view">
+    <input class="toggle" type="checkbox" [formControl]="checkedToDo" [checked]="toDo.status">
+    <label (dblclick)="editTask()">{{ toDo.text }}</label>
+    <button (click)="deleteTask()" class="destroy"></button>
+  </div>
+  <input class="edit" [value]="toDo.text" [formControl]="inputEditToDo" (blur)="blurTask()" #editFieldView>
+</li>
